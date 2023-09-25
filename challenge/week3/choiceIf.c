@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 int main() {
@@ -24,4 +25,3 @@ int main() {
 		printf("잘못 입력하셨습니다.");
 	}
 	//choice값에 따라 경우의 수들이 나뉘게 된다
-}
