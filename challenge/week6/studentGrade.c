@@ -30,8 +30,8 @@ void classifyStudents(int scores[], char targetGrade) { //함수 정의
 
 int sumScores(int scores[]) {
 	int total = 0;
-	for (int i = 0; i < STUDENT; i++) {
-		total+=scores[i]
+	for (int i = 0; i < STUDENTS; i++) {
+		total += scores[i];
 	}
 	return total;
 
