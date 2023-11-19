@@ -1,5 +1,4 @@
-#include <stdio.h>
-#define STUDENTS 5
+
 
 #include <stdio.h>
 #define STUDENTS 5 //학생 수는 5명 
@@ -23,7 +22,7 @@ void classifyStudents(int scores[], char targetGrade) { //함수 정의
 			grade = 'F';
 		}
 		if (targetGrade == grade) {
-			printf("%d 학생은 %c점수를 받았습니다", i + 1, targetGrade);
+			printf("%d 학생은 %c점수를 받았습니다\n", i + 1, targetGrade);
 		}
 	}
 }
@@ -38,9 +37,22 @@ int sumScores(int scores[]) {
 }
 
 double averageScores(int scores[]) {
+	int sum = sumScores(scores);
+	double average = (double)sum / (double)STUDENTS;
+	return average;
 
 }
 void printRanks(int scores[]) {
+	int ranks[STUDENTS];
+	for (int i = 0; i < STUDENTS; i++) {
+		ranks[i] = 1;
+		for (int j = 0; j < STUDENTS; j++) {
+			if (scores[j] > scores[i]) {
+				ranks[i]++;
+			}
+		}
+		printf("%d 학생의 순위는 %d입니다.\n", i + 1, ranks[i]);
+	}
 
 }
 
